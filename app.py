@@ -1,3 +1,4 @@
+!pip install streamlit
 import streamlit as st
 import pandas as pd
 import pickle
@@ -40,4 +41,5 @@ if st.button("Predict Loan Status"):
     if prediction[0] == 1:
         st.success(f"✅ Loan Approved (Probability: {probability[0][1]*100:.2f}%)")
     else:
+
         st.error(f"❌ Loan Not Approved (Probability: {probability[0][1]*100:.2f}%)")
